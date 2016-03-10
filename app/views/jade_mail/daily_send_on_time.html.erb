@@ -1,0 +1,19 @@
+<table border="1">
+	
+	<tr>
+		<%(1..@ws.num_cols).each do |col|%>
+		<th><%= @ws[1, col] %></th>
+        <% end %>
+	</tr>	
+	
+	    <% (2..@ws.num_rows).each do |row| %>
+	    <tr>
+        <% (1..@ws.num_cols).each do |col| %>
+	   
+		<td><%= @ws[row, col] %></td>
+		
+        <% end %>
+		 </tr>
+        <% end %>
+	
+</table>

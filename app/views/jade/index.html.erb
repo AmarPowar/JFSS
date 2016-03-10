@@ -1,0 +1,77 @@
+Hi All,
+Please find stories and incidents that are "in progress" from Jade offshore dev team for 
+
+<ul>
+	<li>Front office dev</li>
+</ul>
+
+<table border="1">
+	
+	<tr>
+		<%(1..@ws.num_cols).each do |col|%>
+		<th><%= @ws[1, col] %></th>
+        <% end %>
+	</tr>	
+	
+	    <% (2..@ws.num_rows).each do |row| %>
+	    <tr>
+        <% (1..@ws.num_cols).each do |col| %>
+	      
+			<% resources = @ws[row ,2] %>
+			
+			<% completion = @ws[row ,7] #100 is in the form of string %>
+			<% complete = completion.to_i %>
+			
+			<% #filter code %>
+			
+				<% if (resources == "Anshu Samriya") || (resources == "Atul Jain") || (resources == "Bihag Raval") || (resources == "Mrigank Gupta") || (resources == "Pankaj Pawar") || (resources == "Sushant Arora") || (resources == "Swapnil W") || (resources == "Sagar Rudrawar") %>
+			
+			<% if complete < 100 %>
+			    
+			
+		   <td><%= @ws[row, col] %></td>
+			<% end %>
+			<% end %>
+			
+        <% end %>
+		 </tr>
+        <% end %>
+	
+</table>
+
+<ul>
+	<li>Back office dev</li>
+</ul>
+
+<table border="1">
+	
+	<tr>
+		<%(1..@ws.num_cols).each do |col|%>
+		<th><%= @ws[1, col] %></th>
+        <% end %>
+	</tr>	
+	
+	    <% (2..@ws.num_rows).each do |row| %>
+	    <tr>
+        <% (1..@ws.num_cols).each do |col| %>
+	      
+			<% resources = @ws[row ,2] %>
+			
+			<% completion = @ws[row ,7] #100 is in the form of string %>
+			<% complete = completion.to_i %>
+			
+		   	  
+				<% if (resources == "Amit Manchanda") || (resources == "Husain Merchant") || (resources == "Vishwas Babre") || (resources == "Vyankatesh Bhogate") || (resources == "Pradip Kumbhar") || (resources == "Pooja Sutar") || (resources == "Hrishikesh Hirlikar")  %>
+			
+			<% if complete < 100 %>
+			    
+			
+		   <td><%= @ws[row, col] %></td>
+			<% end %>
+			<% end %>
+			
+        <% end %>
+		 </tr>
+        <% end %>
+	
+</table>

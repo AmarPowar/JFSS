@@ -1,0 +1,122 @@
+<h3>column name</h3>
+
+<%(1..@ws.num_cols).each do |col|%>
+  
+<% @ws[1, col] %>
+
+
+<% end %>
+
+<h3>coloumn data</h3>
+<% (2..@ws.num_rows).each do |row| %>
+<% (1..@ws.num_cols).each do |col| %>
+<% @ws[row, col] %>
+<% end %>
+<% end %>
+
+
+
+
+
+
+<table border="1">
+	
+	<tr>
+		<%(1..@ws.num_cols).each do |col|%>
+		<th><%= @ws[1, col] %></th>
+        <% end %>
+	</tr>	
+	
+	    <% (2..@ws.num_rows).each do |row| %>
+	    <tr>
+        <% (1..@ws.num_cols).each do |col| %>
+	   
+		<td><%= @ws[row, col] %></td>
+		
+        <% end %>
+		 </tr>
+        <% end %>
+	
+</table>
+
+index
+
+<table border="1">
+	
+	<tr>
+		<%(1..@ws.num_cols).each do |col|%>
+		<th><%= @ws[1, col] %></th>
+        <% end %>
+	</tr>	
+	
+	    <% (2..@ws.num_rows).each do |row| %>
+	    <tr>
+        <% (1..@ws.num_cols).each do |col| %>
+	   
+		<td><%= @ws[row, col] %></td>
+		
+        <% end %>
+		 </tr>
+        <% end %>
+	
+</table>
+
+
+
+<table border="1">
+	
+	<tr>
+		<%(1..@ws.num_cols).each do |col|%>
+		<th><%= @ws[1, col] %></th>
+        <% end %>
+	</tr>	
+	
+	    <% (2..@ws.num_rows).each do |row| %>
+	    <tr>
+        <% (1..@ws.num_cols).each do |col| %>
+	      
+			<% resources = @ws[row ,2] %>
+		   	  
+				<% if resources == "Swapnil W"  %> 
+		   <td><%= @ws[row, col] %></td>
+			
+			<% end %>
+        <% end %>
+		 </tr>
+        <% end %>
+	
+</table>
+
+
+
+final
+
+
+<table border="1">
+	
+	<tr>
+		<%(1..@ws.num_cols).each do |col|%>
+		<th><%= @ws[1, col] %></th>
+        <% end %>
+	</tr>	
+	
+	    <% (2..@ws.num_rows).each do |row| %>
+	    <tr>
+        <% (1..@ws.num_cols).each do |col| %>
+	      
+			<% resources = @ws[row ,2] %>
+			
+			<% completion = @ws[row,7] %>
+		   	  
+				<% if (resources == "Anshu Samriya") || (resources == "Atul Jain") || (resources == "Bihag Raval") || (resources == "Mrigank Gupta") || (resources == "Pankaj Pawar") || (resources == "Sushant Arora") || (resources == "Swapnil W") || (resources == "Sagar Rudrawar") %> 
+			    
+			    <% if (completion < 100 )%>
+			
+		   <td><%= @ws[row, col] %></td>
+			<% end %>
+			<% end %>
+        <% end %>
+		 </tr>
+        <% end %>
+	
+</table>
